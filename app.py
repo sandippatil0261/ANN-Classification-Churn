@@ -10,11 +10,11 @@ import torch.nn as nn
 
 
 
-with open (r'C:\Users\E40056416\Documents\Extra\learning\AIML\GenAI\10_Section_13\onehot_encoder_geo.pkl','rb') as f:
+with open (r'onehot_encoder_geo.pkl','rb') as f:
     label_encoder_geo=pickle.load(f)
-with open (r'C:\Users\E40056416\Documents\Extra\learning\AIML\GenAI\10_Section_13\label_encoder_gender.pkl','rb') as f:
+with open (r'label_encoder_gender.pkl','rb') as f:
     label_encoder_gender=pickle.load(f)
-with open (r'C:\Users\E40056416\Documents\Extra\learning\AIML\GenAI\10_Section_13\scaler.pkl','rb') as f:
+with open (r'scaler.pkl','rb') as f:
     scaler=pickle.load(f)
 
 # 2) Recreate the ANN architecture EXACTLY as trained
@@ -96,4 +96,5 @@ st.write(f"Churn probability: {prob:.2f}")
 if pred==1:
     st.warning("The customer is likely to churn.")
 else:
+
     st.success("The customer is not likely to churn.")

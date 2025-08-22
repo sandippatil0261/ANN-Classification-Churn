@@ -40,7 +40,7 @@ if input_dim is None:
 model =ANN_Model(input_dim=input_dim).to(device)
 
 # Replace the filename with whatever you saved (e.g., 'model.pth' or 'best_weights.pth')
-state_dict=torch.load(r'C:\Users\E40056416\Documents\Extra\learning\AIML\GenAI\10_Section_13\model.pth', map_location=device)
+state_dict=torch.load(r'model.pth', map_location=device)
 model.load_state_dict(state_dict)
 model.eval()
 
@@ -98,3 +98,4 @@ if pred==1:
 else:
 
     st.success("The customer is not likely to churn.")
+
